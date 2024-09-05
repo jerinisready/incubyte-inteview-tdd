@@ -9,7 +9,7 @@ test.py ...F                                                             [100%]
 =================================== FAILURES ===================================
 ______________ TestAddFunction.test_add_with_different_delimiters ______________
 
-self = <test.TestAddFunction object at 0x79a86d21f790>
+self = <test.TestAddFunction object at 0x73db14d036d0>
 
     def test_add_with_different_delimiters(self):
         response = add('1\n2,3')

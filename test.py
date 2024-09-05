@@ -17,4 +17,6 @@ class TestAddFunction:
         response = add('3')
         assert response == 3
 
-
+    def test_add_with_different_delimiters(self):
+        response = add('1\n2,3')
+        assert response == 6
