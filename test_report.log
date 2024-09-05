@@ -1,0 +1,44 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.2, pluggy-1.5.0
+rootdir: /home/bridge/code/incubyte
+plugins: Faker-24.4.0, anyio-4.4.0
+collected 3 items
+
+test.py FFF                                                              [100%]
+
+=================================== FAILURES ===================================
+________________ TestAddFunction.test_add_function_three_digits ________________
+
+self = <test.TestAddFunction object at 0x7d08a450f2b0>
+
+    def test_add_function_three_digits(self):
+        response = add('1,2,3')
+>       assert response == 6
+E       assert None == 6
+
+test.py:10: AssertionError
+________________ TestAddFunction.test_add_function_empty_string ________________
+
+self = <test.TestAddFunction object at 0x7d08a450f3d0>
+
+    def test_add_function_empty_string(self):
+        response = add('')
+>       assert response == 0
+E       assert None == 0
+
+test.py:14: AssertionError
+________________ TestAddFunction.test_add_function_signle_digit ________________
+
+self = <test.TestAddFunction object at 0x7d08a450f5b0>
+
+    def test_add_function_signle_digit(self):
+        response = add('3')
+>       assert response == 3
+E       assert None == 3
+
+test.py:18: AssertionError
+=========================== short test summary info ============================
+FAILED test.py::TestAddFunction::test_add_function_three_digits - assert None...
+FAILED test.py::TestAddFunction::test_add_function_empty_string - assert None...
+FAILED test.py::TestAddFunction::test_add_function_signle_digit - assert None...
+============================== 3 failed in 0.04s ===============================
