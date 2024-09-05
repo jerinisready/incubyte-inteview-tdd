@@ -18,7 +18,7 @@ class TestAddFunction:
         assert response == 3
 
 
-    @pytest.mark.skip(reason="Skipping this test for now")
+    # @pytest.mark.skip(reason="Skipping this test for now")
     def test_add_with_different_delimiters(self):   # ignoring passing case of \n anymore
         response = add('//[,][\n]\n1\n2,3')
         assert response == 6
