@@ -9,7 +9,7 @@ test.py F..sFFFFFF                                                       [100%]
 =================================== FAILURES ===================================
 ________________ TestAddFunction.test_add_function_three_digits ________________
 
-self = <test.TestAddFunction object at 0x7ae8700bf400>
+self = <test.TestAddFunction object at 0x749e45e0b370>
 
     def test_add_function_three_digits(self):
         response = add('//[,]\n1,2,3')
@@ -19,7 +19,7 @@ E       assert 0 == 6
 test.py:10: AssertionError
 ______________ TestAddFunction.test_support_multiple_delimieters _______________
 
-self = <test.TestAddFunction object at 0x7ae8700bfa30>
+self = <test.TestAddFunction object at 0x749e45e0ba00>
 
     def test_support_multiple_delimieters(self):
         response = add('//[;]\n1;2;3')
@@ -29,7 +29,7 @@ E       assert 0 == 6
 test.py:28: AssertionError
 _______________ TestAddFunction.test_handle_invalid_syntax_input _______________
 
-self = <test.TestAddFunction object at 0x7ae8700bfbe0>
+self = <test.TestAddFunction object at 0x749e45e0bc10>
 
     def test_handle_invalid_syntax_input(self):
         with pytest.raises(AddHandlerException, match="Improply created input pattern"):
@@ -44,7 +44,7 @@ E       Failed: DID NOT RAISE <class 'main.AddHandlerException'>
 test.py:37: Failed
 _________________ TestAddFunction.test_handle_negative_numebr __________________
 
-self = <test.TestAddFunction object at 0x7ae8700bfdc0>
+self = <test.TestAddFunction object at 0x749e45e0bd30>
 
     def test_handle_negative_numebr(self):
 >       with pytest.raises(AddHandlerException, match="negative numbers not allowed -1"):
@@ -53,7 +53,7 @@ E       Failed: DID NOT RAISE <class 'main.AddHandlerException'>
 test.py:42: Failed
 _________________ TestAddFunction.test_handle_negative_numebrs _________________
 
-self = <test.TestAddFunction object at 0x7ae8700bffd0>
+self = <test.TestAddFunction object at 0x749e45e0bee0>
 
     def test_handle_negative_numebrs(self):
 >       with pytest.raises(AddHandlerException, match="negative numbers not allowed -1,-3"):
@@ -62,7 +62,7 @@ E       Failed: DID NOT RAISE <class 'main.AddHandlerException'>
 test.py:47: Failed
 _________________ TestAddFunction.test_prevent_4_digit_numbers _________________
 
-self = <test.TestAddFunction object at 0x7ae8700bdc30>
+self = <test.TestAddFunction object at 0x749e45e09c60>
 
     def test_prevent_4_digit_numbers(self):
         response = add('//[;]\n1;2;1000;3')
@@ -72,7 +72,7 @@ E       assert 0 == 6
 test.py:52: AssertionError
 ______________ TestAddFunction.test_delimiter_length_more_than_1 _______________
 
-self = <test.TestAddFunction object at 0x7ae8700bda80>
+self = <test.TestAddFunction object at 0x749e45e09990>
 
     def test_delimiter_length_more_than_1(self):
         response = add('//[;]\n1;2;1000;3')
