@@ -30,13 +30,19 @@ def add(string):
     out = 0
     processed_numbers = []
     negative_numbers = []
+
     for item in numbers:
+
        if not item:
           continue
+
        elif item.startswith('-') and item[1:].isdigit():
            negative_numbers.append(item)
 
        elif item.isdigit():
+
+           if len(item) > 3:
+               continue
            processed_numbers.append(int(item))
 
 
