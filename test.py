@@ -34,4 +34,12 @@ class TestAddFunction:
         with pytest.raises(AddHandlerException, match="Improply created input pattern"):
             add('//;123')
 
+    def test_handle_negative_numebr(self):
+        with pytest.raises(AddHandlerException, match="negative numbers not allowed -1"):
+            add('//;\n-1;2;3')
+
+
+    def test_handle_negative_numebrs(self):
+        with pytest.raises(AddHandlerException, match="negative numbers not allowed -1,-3"):
+            add('//;\n-1;2;-3')
 
