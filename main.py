@@ -28,8 +28,19 @@ def add(string):
     numbers = re.split('[{}]'.format(delimiters), number_input)
 
     out = 0
+    processed_numbers = []
+    negative_numbers = []
     for item in numbers:
-       if item.isdigit():
-           out += int(item)
+       if not item:
+          continue
+       elif item.startswith('-') and item[1:].isdigit():
+           negative_numbers.append(item)
 
-    return out
+       elif item.isdigit():
+           processed_numbers.append(int(item))
+
+
+    if negative_numbers:
+        raise AddHandlerException('negative numbers not allowed {}'.format(','.join(negative_numbers)))
+
+    return sum(processed_numbers)
