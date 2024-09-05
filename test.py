@@ -43,3 +43,6 @@ class TestAddFunction:
         with pytest.raises(AddHandlerException, match="negative numbers not allowed -1,-3"):
             add('//;\n-1;2;-3')
 
+   def test_prevent_4_digit_numbers(self)
+        response = add('//;\n1;2;1000;3')
+        assert response == 6
