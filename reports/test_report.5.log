@@ -9,7 +9,7 @@ test.py ....F                                                            [100%]
 =================================== FAILURES ===================================
 ______________ TestAddFunction.test_support_multiple_delimieters _______________
 
-self = <test.TestAddFunction object at 0x768f8198f970>
+self = <test.TestAddFunction object at 0x7542b0d77bb0>
 
     def test_support_multiple_delimieters(self):
         response = add('//;\n1;2;3')
