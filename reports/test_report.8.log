@@ -9,7 +9,7 @@ test.py ...s....F                                                        [100%]
 =================================== FAILURES ===================================
 _________________ TestAddFunction.test_prevent_4_digit_numbers _________________
 
-self = <test.TestAddFunction object at 0x7f3059c51c30>
+self = <test.TestAddFunction object at 0x7019a3215bd0>
 
     def test_prevent_4_digit_numbers(self):
         response = add('//;\n1;2;1000;3')
