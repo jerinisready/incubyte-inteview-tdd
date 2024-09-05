@@ -6,13 +6,27 @@ dated: Sept 5, 2024
 import re
 
 
+# expected in exceptions.py
+
+class AddHandlerException(Exception):
+    """
+     Used to raise when things are out of handle in add method. 
+    """
+
+
 def add(string):
     """ Get sum of comma seperated digits in the string  """
 
-    delimiters = [',', '\n']
-    delimiters_regex = '[{}]'.format(''.join(delimiters))
+    match = re.search(r'//(.*?)\n(.*)', string)
+    if match:
+        delimiters = match.group(1)
+        number_input = match.group(2)
 
-    numbers = re.split(delimiters_regex, string)
+    else:
+        raise AddHandlerException('Improply created input pattern')
+
+    numbers = re.split('[{}]'.format(delimiters), number_input)
+
     out = 0
     for item in numbers:
        if item.isdigit():
